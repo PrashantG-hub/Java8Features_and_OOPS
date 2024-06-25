@@ -1,15 +1,13 @@
-public class Functional_Interfce {
-
-    @FunctionalInterface
+ @FunctionalInterface
     interface sayable {
         void say(String msg);                     // Only 1 abstract method
 
-        default int giveNum() {
+         default int giveNum() {
             return 9;
         }
     }
-}
-         class functionalInterface implements Functional_Interfce.sayable {
+
+         class functionalInterface implements sayable {
              public void say(String msg) {
                  System.out.println(msg);
              }
